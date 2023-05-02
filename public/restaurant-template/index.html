@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Template</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+    <script src="https://kit.fontawesome.com/c63e61b415.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <main class="header has-background-color">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a href="index.html#header-page" class="select-editable-content"> Madrid </a>
+                </div>
+                <ul id="nav-bar-content">
+                    <li class="li-item nav-menu"><a href="#" class="header-nav-bar-home a-item font-size">цэс</a></li>
+                    <li class="li-item nav-book"><a href="#" class="header-nav-bar-products a-item font-size">захиалга
+                            авах</a>
+                    </li>
+                    <li class="li-item nav-about"><a href="#" class="header-nav-bar-about-us a-item font-size">бидний
+                            тухай</a>
+                    </li>
+                    <li class="li-item nav-contact"><a href="#" class="header-nav-bar-contacts a-item font-size">холбоо
+                            барих</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <section class="cover-image" id="header-page">
+            <div class="parallax-image has-background-img">
+                <div class="text-block">
+                    <h1 class="select-editable-content fontColor font-change">ШИМ ТЭЖЭЭЛТЭЙГ ӨӨРТӨӨ</h1>
+                    <button type="button" id="reserve-btn" class="font-change">захиалга авах</button>
+                </div>
+            </div>
+        </section>
+        <section class="rest-menu has-background-color" id="menu-page">
+            <div class="title">
+                <h2 class="products-h2 fontColor font-change">цэс</h2>
+            </div>
+            <div class="menu-container">
+                <!-- breakfast row -->
+                <div class="menu-list has-base-color">
+                    <div class="menu-icon">
+                        <img src="../images/restaurant-template-images/breakfast.svg" alt="breakfast">
+                    </div>
+                    <h3>Өглөөний цай</h3>
+                    <div class="menu-inner">
+                        <span class="name">
+                            <span class="food-title">Sandwich</span>
+                            <span class="price">7900₮</span>
+                        </span>
+                        <p>A crisp salad featuring peanut and fresh ugli fruit.</p>
+                    </div>
+                    <div class="menu-inner">
+                        <span class="name">
+                            <span class="food-title">Өндөг, зайдас</span>
+                            <span class="price">6900₮</span>
+                        </span>
+                        <p>A crisp salad featuring peanut and fresh ugli fruit.</p>
+                    </div>
+                    <div class="menu-inner">
+                        <span class="name">
+                            <span class="food-title">Бурито</span>
+                            <span class="price">8900₮</span>
+                        </span>
+                        <p>A crisp salad featuring peanut and fresh ugli fruit.</p>
+                    </div>
+                </div>
+                <!-- salad row -->
+                <div class="menu-list has-base-color">
+                    <div class="menu-icon">
+                        <img src="../images/restaurant-template-images/salad.svg" alt="salad">
+                    </div>
+                    <h3>Салат, зууш</h3>
+                    <div class="menu-inner">
+                        <span class="name">
+                            <span class="food-title">Chicken ceaser salad</span>
+                            <span class="price">9900₮</span>
+                        </span>
+                        <p>Тахианы мах, пармезан бяслаг, цезарь сүмстэй</p>
+                    </div>
+                    <div class="menu-inner">
+                        <span class="name">
+                            <span class="food-title">Chicken ceaser salad</span>
+                            <span class="price">9900₮</span>
+                        </span>
+                        <p>Тахианы мах, пармезан бяслаг, цезарь сүмстэй</p>
+                    </div>
+                </div>
+                <!-- dinner row -->
+                <div class="menu-list has-base-color">
+                    <div class="menu-icon">
+                        <img src="../images/restaurant-template-images/dinner.svg" alt="dinner">
+                    </div>
+                    <h3>Үндсэн хоол</h3>
+                    <div class="menu-inner">
+                        <span class="name">
+                            <span class="food-title">Холимог махтай пицца </span>
+                            <span class="price">15,900₮</span>
+                        </span>
+                        <p>Үхрийн мах, салами хиам, тахианы цээж мах, беконтой</p>
+                    </div>
+                    <div class="menu-inner">
+                        <span class="name">
+                            <span class="food-title">Тахианы мах бууцайтай пицца</span>
+                            <span class="price">15,900₮</span>
+                        </span>
+                        <p>Тахианы цээж мах, бууцайтай</p>
+                    </div>
+                    <div class="menu-inner">
+                        <span class="name">
+                            <span class="food-title">Үхрийн махтай BBQ пицца</span>
+                            <span class="price">15,900₮</span>
+                        </span>
+                        <p>Үхрийн гол мах, барбекю сүмстэй</p>
+                    </div>
+                    <div class="menu-inner">
+                        <span class="name">
+                            <span class="food-title">Хавай пицца</span>
+                            <span class="price">15,900₮</span>
+                        </span>
+                        <p>Гахайн утсан мах, ханборгоцойтой</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Trigger the modal button -->
+            <!-- <button id="menu-modal-btn" type="button"> See More </button> -->
+            <!-- Menu Modal -->
+            <div class="menu-modal-container">
+                <div class="menu-modal-content">
+                    <div class="modal-menu">
+                        <!-- Dessert row -->
+                        <div class="menu-list has-base-color">
+                            <div class="menu-icon">
+                                <img src="../images/restaurant-template-images/cake.svg" alt="cake">
+                            </div>
+                            <h3>Aмттан</h3>
+                            <div class="menu-inner">
+                                <span class="name">
+                                    <span class="food-title">Peanut And Ugli </span>
+                                    <span class="price">15,600₮</span>
+                                </span>
+                                <p>A crisp salad featuring peanut and fresh.</p>
+                            </div>
+                            <div class="menu-inner">
+                                <span class="name">
+                                    <span class="food-title">Peanut And Ugli</span>
+                                    <span class="price">15,600₮</span>
+                                </span>
+                                <p>A crisp salad featuring peanut and fresh</p>
+                            </div>
+                        </div>
+                        <!-- Alcohol row -->
+                        <div class="menu-list has-base-color">
+                            <div class="menu-icon">
+                                <img src="../images/restaurant-template-images/whiskey.svg" alt="alcohol">
+                            </div>
+                            <h3>Alcohol</h3>
+                            <div class="menu-inner">
+                                <span class="name">
+                                    <span class="food-title">Calvet Reserve Bordeaux</span>
+                                    <span class="price">64,900₮</span>
+                                </span>
+                                <p>A crisp salad featuring peanut and fresh ugli fruit.</p>
+                            </div>
+                            <div class="menu-inner">
+                                <span class="name">
+                                    <span class="food-title">Merlot</span>
+                                    <span class="price">24,900₮</span>
+                                </span>
+                                <p>A crisp salad featuring peanut and fresh ugli fruit.</p>
+                            </div>
+                            <div class="menu-inner">
+                                <span class="name">
+                                    <span class="food-title">Domaine de la Baume</span>
+                                    <span class="price">74,900₮</span>
+                                </span>
+                                <p>A crisp salad featuring peanut and fresh ugli fruit.</p>
+                            </div>
+                            <div class="menu-inner">
+                                <span class="name">
+                                    <span class="food-title">Domaine de la Baume</span>
+                                    <span class="price">74,900₮</span>
+                                </span>
+                                <p>A crisp salad featuring peanut and fresh ugli fruit.</p>
+                            </div>
+                        </div>
+                        <!-- Drink row -->
+                        <div class="menu-list has-base-color">
+                            <div class="menu-icon">
+                                <img src="../images/restaurant-template-images/juice.svg" alt="beverage">
+                            </div>
+                            <h3>Жүүс, ундаа</h3>
+                            <div class="menu-inner">
+                                <span class="name">
+                                    <span class="food-title">Coca cola</span>
+                                    <span class="price">2000₮</span>
+                                </span>
+                                <p>200 мл савлагаатай</p>
+                            </div>
+                            <div class="menu-inner">
+                                <span class="name">
+                                    <span class="food-title">Sprite (0.2л)</span>
+                                    <span class="price">2000₮</span>
+                                </span>
+                                <p>200 мл савлагаатай</p>
+                            </div>
+                            <div class="menu-inner">
+                                <span class="name">
+                                    <span class="food-title">Цэвэр ус (0.5л)</span>
+                                    <span class="price">2100₮</span>
+                                </span>
+                                <p>0.5 л савлагаатай</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end of the menu-modal -->
+        </section>
+        <section class="book-table" id="book-page">
+            <div class="reserve-image">
+                <div class="title">
+                    <h2 class="order-h2 fontColor font-change">захиалга</h2>
+                </div>
+                <div class="reservation">
+                    <form class="reserve-form" action="#">
+                        <div class="form1">
+                            <input type="text" class="reserve-item" id="reserve-name" placeholder="НЭР">
+                            <input type="text" class="reserve-item" id="reserve-email" placeholder="И-МЭЙЛ">
+                            <input type="text" class="reserve-item" id="reserve-phone" placeholder="УТАС">
+                        </div>
+                        <div class="form2">
+                            <!-- the number of the people -->
+                            <select name="table" id="table">
+                                <option class="table-value" value="1">1</option>
+                                <option class="table-value" value="2">2</option>
+                                <option class="table-value" value="3">3</option>
+                                <option class="table-value" value="4">4</option>
+                                <option class="table-value" value="5">5</option>
+                                <option class="table-value" value="6">6</option>
+                                <option class="table-value" value="7">7</option>
+                                <option class="table-value" value="8">8</option>
+                                <option class="table-value" value="9">9</option>
+                                <option class="table-value" value="10">10</option>
+                            </select>
+                            <!-- Calendar -->
+                            <input type="date" name="date" id="date">
+                            <!-- Reminder of the reservation -->
+                            <select name="time" id="time">
+                                <option class="time-value" value="8:00 A.M">8:00 AM</option>
+                                <option class="time-value" value="10:00 A.M">10:00 AM</option>
+                                <option class="time-value" value="12:00 A.M">12:00 AM</option>
+                                <option class="time-value" value="1:00 P.M">1:00 PM</option>
+                                <option class="time-value" value="3:00 P.M">3:00 PM</option>
+                                <option class="time-value" value="5:00 P.M">5:00 PM</option>
+                                <option class="time-value" value="7:00 P.M">7:00 PM</option>
+                                <option class="time-value" value="9:00 P.M">9:00 PM</option>
+                                <option class="time-value" value="10:00 P.M">10:00 PM</option>
+                            </select>
+                        </div>
+                    </form>
+                    <div class="order-btn">
+                        <button type="button" id="order-btn" class="font-change"> захиалах </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about has-background-color" id="about-page">
+            <div class="title">
+                <h2 class="about-h2 fontColor font-change">бидний тухай<h2>
+            </div>
+            <div class="about-img-text">
+                <figure class="image-frame">
+                    <img src="../images/restaurant-template-images/h2-img1.png" alt="chef">
+                </figure>
+                <div class="box-time has-base-color">
+                    <h3>Нээх Цаг</h3>
+                    <ul>
+                        <li>Даваа – Баасан … 11 AM – 3 PM</li>
+                        <li>Бямба … 11 AM – 3 PM</li>
+                        <li>Ням … 11 AM – 3 PM</li>
+                    </ul>
+                </div>
+                <div class="about-text">
+                    <div class="block-box">
+                        <div class="block-column">
+                            <p class="select-editable-content textColor font-change">Төрөл бүрийн хүргэлтийн үйлчилгээг
+                                авах амар боллоо. Та дуртай рестораныхаа дуртай хоолыг хүссэн газартаа хурдан шуурхай
+                                захиалж авчруулахыг хүсвэл, гар утсан дээрээ хэдхэн товшиход хангалттай.</p>
+                        </div>
+                        <div class="block-column">
+                            <p class="select-editable-content textColor font-change"> Та хоолны төрөл, хүргэлтийн зай,
+                                хүргэлтийн төлбөрөөр шүүн эрэмбэлж захиалга хийх боломжтой бөгөөд бид хүргэлтийн явцын
+                                мэдээллийг танд мэдэгдэж байх болно.</p>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon-box-item">
+                            <img src="../images/restaurant-template-images/quality.svg" alt="hours">
+                            <h3 class="select-editable-content font-change">Чанар</h3>
+                            <p class="select-editable-content textColor font-change">Lorem ipsum dolor sit amet, conse
+                                cteturad ipi scing elit. Suspen disse vitae ligula quis.</p>
+                        </div>
+                        <div class="icon-box-item">
+                            <img src="../images/restaurant-template-images/herbs.svg" alt="hours">
+                            <h3 class="select-editable-content font-change">Fresh Food</h3>
+                            <p class="select-editable-content textColor font-change">Lorem ipsum dolor sit amet, conse
+                                cteturad ipi scing elit. Suspen disse vitae ligula quis.</p>
+                        </div>
+                        <div class="icon-box-item">
+                            <img src="../images/restaurant-template-images/customer-service.svg" alt="hours">
+                            <h3 class="select-editable-content font-change">Үйлчилгээ</h3>
+                            <p class="select-editable-content textColor font-change">Lorem ipsum dolor sit amet, conse
+                                cteturad ipi scing elit. Suspen disse vitae ligula quis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact has-background-color" id="contact-page">
+            <div class="title">
+                <h2 class="contact-h2 fontColor font-change">холбоо барих</h2>
+            </div>
+            <div class="address-contact">
+                <form class="contact-forms">
+                    <h1 class="font-change">Санал хүсэлт илгээх</h1>
+                    <input type="text" class="contact-item" id='firstname' placeholder="Нэр">
+                    <input type="text" class="contact-item" id='email' placeholder="И-мэйл" style="margin-left: 15px;">
+                    <input type="text" class="subject-form" placeholder="Сэдэв">
+                    <textarea name="message" id="message" cols="59" rows="10"></textarea><br>
+                    <button type="button" id="contact-btn" class="font-change send-btn"> Илгээх </button>
+                </form>
+                <address class="contact-info">
+                    <div class="follow"><b>Хаяг: </b><i class="fas fa-map-marker-alt"></i><span
+                            class="select-editable-content textColor font-change">Улаанбаатар хот, Хан-Уул дүүрэг, 15-р
+                            хороо, Их-Монгол улсын гудамж, KFC Home Plaza салбарын 2-р давхар </span></div>
+                    <div class="follow"><b>Xолбоо барих: </b><i class="fas fa-mobile-alt"></i><span
+                            class="select-editable-content textColor font-change">+976-99667989</span></div>
+                    <div class="follow"><b>И-мэйл: </b><i class="far fa-envelope"></i><span
+                            class="select-editable-content textColor font-change">example@gmail.com</span></div>
+                    <div class="social-icon">
+                        <a class='facebookLink' href="#"><img class="page-social-icon-facebook"
+                                src="../images/restaurant-template-images/facebook.svg" alt="facebook"></a>
+                        <a class='instagramLink' href="#"><img class="page-social-icon-instagram"
+                                src="../images/online-template-images/instagram.png" alt="instagram"></a>
+                        <a class='youtubeLink' href="#"><img class="page-social-icon-youtube"
+                                src="../images/restaurant-template-images/youtube.svg" alt="youtube"></a>
+                        <a class='linkedinLink' href="#"><img class="page-social-icon-linkedin"
+                                src="../images/restaurant-template-images/linkedin.svg" alt="linkedin"></a>
+                    </div>
+                </address>
+            </div>
+        </section>
+        <!-- Page Editor section -->
+        <section class="page-editor">
+            <div class="page-editor-container" id='dragme' draggable="true">
+                <div class="editor-container-top-peak"></div>
+                <div class="editor-container-top"></div>
+                <div class="editor-container-bottom"></div>
+                <div class="page-editor-homepage">
+                    <img src="../images/restaurant-template-images/homepage.png" alt="">
+                    <h4>Нүүр хуудас</h4>
+                    <div class="page-editor-homepage-content">
+                        <div class="page-editor-homepage-content-text">Текст</div>
+                        <div class="page-editor-homepage-content-background-image"><span>Нүүр зураг</span>
+                            <div class="background-img-choices">
+                                <div></div>
+                                <div></div>
+                                <input type="file" id='upload-image' accept="image/*" onchange="uploadSelectedImage()">
+                                <label for="upload-image"><i class="fas fa-images"></i> Нүүр зураг оруулах</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-editor-nav-bar">
+                    <img src="../images/restaurant-template-images/list.png" alt="">
+                    <h4>Үндсэн цэс</h4>
+                    <div class="page-editor-nav-bar-content">
+                        <div class="page-editor-nav-bar-content1">
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Цэс' class="page-editor-nav-bar-content-home input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/restaurant-template-images/delete.png" alt=""></button>
+                            </div>
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Захиалага Авах'
+                                    class="page-editor-nav-bar-content-products input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/restaurant-template-images/delete.png" alt=""></button>
+                            </div>
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Бидний тухай'
+                                    class="page-editor-nav-bar-content-about-us input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/restaurant-template-images/delete.png" alt=""></button>
+                            </div>
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Холбоо барих'
+                                    class="page-editor-nav-bar-content-contacts input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/restaurant-template-images/delete.png" alt=""></button>
+                            </div>
+                        </div>
+                        <button onclick="addNewInput()" class="add-btn" type="button"><img
+                                src="../images/restaurant-template-images/plus.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="page-editor-design">
+                    <img src="../images/restaurant-template-images/brush.png" alt="">
+                    <h4>Дизайн</h4>
+                    <div class="page-editor-design-content">
+
+                        <div class="page-editor-design-content-text1">
+                            <span>Дэвсгэр өнгө</span>
+
+                            <div class="background-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-text2">
+                            <span>Суурь өнгө</span>
+                            <div class="base-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-font">
+                            <span>Гарчигны өнгө</span>
+                            <div class="font-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-text">
+                            <span>Текстийн өнгө</span>
+                            <div class="text-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="font-editor">
+                            <span>Фонт сонголт</span>
+                            <div class="font-editor-choices">
+                                <div>Roboto</div>
+                                <div>Comfortaa</div>
+                                <div>Caveat</div>
+                                <div>Cormorant</div>
+                            </div>
+
+                        </div>
+                        <div class="font-size-editor">
+                            <span>Фонтны хэмжээ</span>
+                            <div class="slide-container">
+                                <input type="range" min="1" max="100" value="1" id="range" class="slider">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="page-editor-social">
+                    <img src="../images/restaurant-template-images/bullhorn.png" alt="">
+                    <h4>Сошиал сувгууд</h4>
+                    <div class="page-editor-social-content">
+                        <div class="social-facebook">
+                            <img src="../images/restaurant-template-images/facebook1.png" alt="">
+                            <div class="toggle-button-facebook">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-instagram">
+                            <img src="../images/restaurant-template-images/instagram.png" alt="">
+                            <div class="toggle-button-instagram">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-linkedin">
+                            <img src="../images/restaurant-template-images/linkedin.png" alt="">
+                            <div class="toggle-button-linkedin">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-youtube">
+                            <img src="../images/restaurant-template-images/youtube.png" alt="">
+                            <div class="toggle-button-youtube">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="editor-save-button" onclick="savePage()">Хадгалах</button>
+            </div>
+        </section>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/pageEditor.js"></script>
+    <script src="./js/restaurant.js"></script>
+</body>
+
+</html>

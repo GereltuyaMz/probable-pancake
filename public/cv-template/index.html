@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>CV and Portfolio</title>
+</head>
+
+<body>
+    <div class="container has-background-color">
+        <main class="header has-background-color font-change">
+            <h2 class="logo select-editable-content font-change fontColor font-size">Logo</h2>
+            <div class="nav-bar">
+                <ul id="navbar">
+                    <li class="li-item"><a href="index.html" class="header-nav-bar-home fontColor a-item">Home</a></li>
+                    <li class="li-item"><a href="index.html#aboutMe"
+                            class="header-nav-bar-about-us fontColor a-item">About me</a></li>
+                    <li class="li-item"><a href="index.html#mySkills"
+                            class="header-nav-bar-products fontColor a-item">My skills</a></li>
+                    <li class="li-item"><a href="index.html#edex"
+                            class="header-nav-bar-education fontColor a-item">Education & Experience</a></li>
+                    <li class="li-item"><a href="index.html#contact"
+                            class="header-nav-bar-contacts fontColor a-item">Contact</a></li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+
+    <section class="homepage has-background-img">
+
+        <div class="coverTexts font-change">
+            <h1 class="centeredText select-editable-content textColor font-size" id="coverText">Өөрийн вэбийг
+                хүссэнээрээ бүтээ!</h1>
+            <h2 class="centeredText2 select-editable-content textColor font-size" id="coverText2">Алхам алхамаар
+                эмхэтгэх гарын авлага</h2>
+        </div>
+    </section>
+    <section class="has-background-color">
+        <div class="space"></div>
+        <div class="about_border"></div>
+        <h1 class="aboutMe about-h2 font-change fontColor" id="aboutMe">МИНИЙ ТУХАЙ</h1>
+        </div>
+        <div class="space has-background-color"></div>
+        <div class="text-center">
+            <p class="cv-text select-editable-content has-base-color font-change textColor font-size">CV (Curriculum
+                Vitae) гэдэг нь тухайн хүний боловсролын болон мэргэжлийн түүхийн тойм ба үүнийг ажлын байрны анкет
+                бөглөхөд ашигладаг юм.
+
+                CV нь ажил олгогчид өөрийнхөө авьяас, ур чадвар, боловсрол, туршлагаа борлуулах гэрчилгээ юм. Уг маягт
+                тухайн ажил хайгчийн талаарх үндсэн мэдээлэл, хувийн шинж чанаруудыг гаргаж ирэхэд чиглэгдсэн байдаг ба
+                тус мэдээллүүд үнэн зөв байх ёстойг анхаарах хэрэгтэй.
+
+                CV бичих “Ганц шилдэг арга, бүтэц” гэж байхгүй.
+                Та Cv-г өөрийн хүссэн бүтцэд оруулж бэлдэж болно.
+                Ажил олгогчид CV нд юу хамгийн чухал бэ? гэдгийг доорх байдлаар жагсаажээ
+                45% өмнөх ажлын туршлага (хамгийн чухал хэсэг нь өмнө эрхэлж байсан ажлын туршлага байдаг юм)
+                35% мэргэжил ба чадвар (Хаана ямар сургууль дүүргэсэн гэх мэт)
+                Уншихад хялбар байх нь 25%-ийг эзэлдэг (таны CV уншиж байгаа хүнд ойлгомжтой, товч, уншихад хялбар байх
+                ёстойг санаарай)
+                Ажил олгогчид CV нд юу хамгийн чухал бэ?гэдгийг доорх байдлаар жагсаажээ.
+                16% Ололт амжилт (таны бүтээсэн амжилт чухал ч нэн түрүүнд дурдагдах зүйл биш гэдгийг анхаараарай)
+                14% Зөв бичгийн дүрэм ба хэлзүй (таны CV хэлзүй болон бичгийн алдаагүй байх хэрэгтэй. </p>
+            <img src="../images/cv-template-images/undraw_work_chat_erdt.svg" class="avatar" width="600" height="400">
+        </div>
+    </section>
+    <section class="has-background-color">
+        <div class="space"></div>
+        <h1 class="aboutMe products-h2 font-change fontColor" id="mySkills">МИНИЙ ЧАДВАРУУД</h1>
+        <div class="body-my-skills has-background-color">
+            <div class="container-my-skills">
+                <div class="card">
+                    <div class="box has-base-color">
+                        <div class="content-my-skills">
+                            <img src="../images/cv-template-images/undraw_work_chat_erdt.svg" class="skills">
+                            <h2 class="select-editable-content font-change fontColor">Гарчиг</h2>
+                            <span class=" textColor skill_text select-editable-content font-change font-size">CV гэдэг
+                                нь "curriculum vitae” гэсэн үгний товчлол юм.</span>
+                            <button onclick="togglePopup()" class="learn-more">Learn More</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-my-skills has-background-color">
+                <div class="container-my-skills">
+                    <div class="card">
+                        <div class="box has-base-color">
+                            <div class="content-my-skills">
+                                <img src="../images/cv-template-images/undraw_work_chat_erdt.svg" class="skills">
+                                <h2 class="select-editable-content font-change fontColor">Гарчиг</h2>
+                                <span class="skill_text select-editable-content font-change textColor font-size">CV
+                                    гэдэг нь "curriculum vitae” гэсэн үгний товчлол юм.</span>
+                                <button onclick="togglePopup()" class="learn-more">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-my-skills has-background-color">
+                    <div class="container-my-skills has-background-color">
+                        <div class="card">
+                            <div class="box has-base-color">
+                                <div class="content-my-skills">
+                                    <img src="../images/cv-template-images/undraw_work_chat_erdt.svg" class="skills">
+                                    <h2 class="select-editable-content font-change fontColor">Гарчиг</h2>
+                                    <span class="skill_text select-editable-content font-change textColor font-size">CV
+                                        гэдэг нь "curriculum vitae” гэсэн үгний товчлол юм.</span>
+                                    <button onclick="togglePopup()" class="learn-more">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup-1">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <button class="close-btn" onclick="togglePopup()"> &times;</button>
+                            <h1 class="select-editable-content">Example</h1>
+                            <p class="select-editable-content">
+                                Do have your name at the top with one email address, one phone number, and address (if
+                                you must) in the header.
+                                Do include your LinkedIn link. Tips on profiles here.
+                                Describe the current position you’re in with bullet points starting with present tense
+                                verbs like “Identify,” “Research,” “Write,” etc.
+                                Describe older positions with bullet points starting with past tense verbs like
+                                “Identified,” “Researched,” “Wrote,” etc.
+                                Capitalize the first word and nothing else that isn’t a proper noun. Here are
+                                capitalization tips if English is not your first language:
+                                https://www.grammarly.com/blog/
+                                capitalization-rules/.
+                                Do make sure you include certifications, internships, clubs you were a part of, awards
+                                you received in college, etc. asfkjjhkqhwfhqwufh
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space"></div>
+    </section>
+    <section class="has-background-color">
+        <div class="borderBottom"></div>
+        <div class="space"></div>
+        <section class="ed_ex">
+            <h1 class="aboutMe education-h2 font-change fontColor font-size" id="edex">БОЛОВСРОЛ БА ТУРШЛАГА</h1>
+            <div class="space"></div>
+            <div class="education">
+                <div class="education_text select-editable-content has-base-color font-change">
+                    <h2 class="font-change fontColor">БОЛОВСРОЛ:</h2>
+                    <span class="font-change textColor font-size">CV- г бичихдээ зөвхөн ажил олгогчид зориулж бичих биш,
+                        өөртөө зориулж бичээрэй. Өөрийгөө үнэлж дүгнэхдээ бас ашиглаарай. Ер нь нэг сайн СV бэлтгээд
+                        тавьсан байхад хэзээд хэрэг болно. CV- гээ жил бүр уншиж танилцаж сайжруулж байгаарай.</span>
+                </div>
+                <div class="experience_text select-editable-content has-base-color">
+                    <h2 class="font-change fontColor">ТУРШЛАГА:</h2>
+                    <span class="font-change textColor font-size">Ажил олгогч менежерүүд таны CV-нээс ямар төрлийн
+                        ажилтан болохыг тодорхойлох учгийг хайж байдаг. Хэрэв та өмнөх ажил олгогч нартааа эерэг үр дүнг
+                        тасралтгүй авчирч чадсан бол та ажил олгогч нарын хүсэн хүлээж байдаг ажилтан гэсэн үг. Хамгийн
+                        чухал зүйл бол өөрийн амжилтаа тодотгон харуулж, боломжит үнэ цэнээ баталж харуулах
+                        хэрэгтэй.</span>
+                </div>
+        </section>
+        <section class="has-background-color">
+            <div class="space"></div>
+            <div class="borderBottom"></div>
+            <div class="space"></div>
+            <h1 class="aboutMe contact-h2 font-change fontColor" id="contact">ХОЛБОО БАРИХ</h1>
+            <div class="icons">
+
+                <div class="page-social-icon-facebook">
+                    <a href="#" class="facebookLink">
+                        <img src="../images/cv-template-images/facebook.png" width="30px" class="facebook" id="fb">
+                    </a>
+                </div>
+
+                <div class="page-social-icon-instagram">
+                    <a href="#" class="instagramLink">
+                        <img src="../images/cv-template-images/ig.png" width="30px" class="instagram" id="ig">
+                    </a>
+                </div>
+
+                <div class="page-social-icon-linkedin">
+                    <a href="#" class="linkedinLink">
+                        <img src="../images/cv-template-images/linkedin.png" width="30px" class="linkedin"
+                            id="linkedIn">
+                    </a>
+                </div>
+
+                <div class="page-social-icon-youtube">
+                    <a href="#" class="youtubeLink">
+                        <img src="../images/cv-template-images/youtube.png" width="39px" class="youtube" id="youtube">
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact">
+                <div class="location">
+                    <span class="select-editable-content font-change textColor">Ulan Bator, Ulaanbaatar Hot,
+                        Mongolia</span>
+                    <hr class="hrNone">
+
+                    <img src="../cv-template/images/phone-call.png" width="15px">
+                    <span class="phoneNumber select-editable-content textColor">+976 88825584</span>
+                    <hr class="hrNone">
+                    <img src="../images/cv-template-images/email.png" width="27px" class="email">
+
+                    <span class="mail select-editable-content font-change textColor">duluu68@yahoo.com</span>
+                    <div class="space"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-editor">
+
+            <div class="page-editor-container" id='dragme' draggable="true">
+                <div class="editor-container-top-peak"></div>
+                <div class="editor-container-top"></div>
+                <div class="editor-container-bottom"></div>
+                <div class="page-editor-homepage">
+                    <img src="../images/cv-template-images/homepage.png" alt="">
+                    <h4>Нүүр хуудас</h4>
+                    <div class="page-editor-homepage-content">
+                        <div class="page-editor-homepage-content-text">Текст</div>
+                        <div class="page-editor-homepage-content-background-image"><span>Нүүр зураг</span>
+                            <div class="background-img-choices">
+                                <div></div>
+                                <div></div>
+                                <input type="file" id='upload-image' accept="image/*" onchange="uploadSelectedImage()">
+                                <label for="upload-image"><i class="fas fa-images"></i> Нүүр зураг оруулах</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-editor-nav-bar">
+                    <img src="../images/cv-template-images/list.png" alt="">
+                    <h4>Үндсэн цэс</h4>
+                    <div class="page-editor-nav-bar-content">
+                        <div class="page-editor-nav-bar-content1">
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Home' class="page-editor-nav-bar-content-home input-a">
+                                <button class="del-btn" type="button"><img src="../images/cv-template-images/delete.png"
+                                        alt=""></button>
+                            </div>
+
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='About me' class="page-editor-nav-bar-content-about-us input-a">
+                                <button class="del-btn" type="button"><img src="../images/cv-template-images/delete.png"
+                                        alt=""></button>
+                            </div>
+
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='My skills' class="page-editor-nav-bar-content-products input-a">
+                                <button class="del-btn" type="button"><img src="../images/cv-template-images/delete.png"
+                                        alt=""></button>
+                            </div>
+
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Education&Experience'
+                                    class="page-editor-nav-bar-content-education input-a">
+                                <button class="del-btn" type="button"><img src="../images/cv-template-images/delete.png"
+                                        alt=""></button>
+                            </div>
+
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Contact' class="page-editor-nav-bar-content-contacts input-a">
+                                <button class="del-btn" type="button"><img src="../images/cv-template-images/delete.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                        <button onclick="addNewInput()" class="add-btn" type="button"><img
+                                src="../images/cv-template-images/plus.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="page-editor-design">
+                    <img src="../images/cv-template-images/brush.png" alt="">
+                    <h4>Дизайн</h4>
+                    <div class="page-editor-design-content">
+
+                        <div class="page-editor-design-content-text1">
+                            <span>Дэвсгэр өнгө</span>
+
+                            <div class="background-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-text2">
+                            <span>Суурь өнгө</span>
+                            <div class="base-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-font">
+                            <span>Гарчигны өнгө</span>
+                            <div class="font-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-text">
+                            <span>Текстийн өнгө</span>
+                            <div class="text-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="font-editor">
+                            <span>Фонт сонголт</span>
+                            <div class="font-editor-choices">
+                                <div>Roboto</div>
+                                <div>Comfortaa</div>
+                                <div>Caveat</div>
+                                <div>Cormorant</div>
+                            </div>
+
+                        </div>
+                        <div class="font-size-editor">
+                            <span>Фонтны хэмжээ</span>
+                            <div class="slide-container">
+                                <input type="range" min="1" max="100" value="1" id="range" class="slider">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="page-editor-social">
+                    <img src="../images/cv-template-images/bullhorn.png" alt="">
+                    <h4>Сошиал сувгууд</h4>
+                    <div class="page-editor-social-content">
+
+
+                        <div class="social-facebook">
+                            <img src="../images/cv-template-images/facebook.png" alt="">
+                            <div class="toggle-button-facebook">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-instagram">
+                            <img src="../images/cv-template-images/ig.png" alt="">
+                            <div class="toggle-button-instagram">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-linkedin">
+                            <img src="../images/cv-template-images/linkedin.png" alt="">
+                            <div class="toggle-button-linkedin">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-youtube">
+                            <img src="../images/cv-template-images/youtube.png" alt="">
+                            <div class="toggle-button-youtube">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <button type="button" class="editor-save-button" onclick="savePage()">Хадгалах</button>
+            </div>
+        </section>
+
+        <script src="./js/pageEditor.js"></script>
+        <script src="./js/cv.js"></script>
+
+</body>
+
+</html>

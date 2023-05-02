@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Lobster Two", cursive;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Lobster Two", cursive;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -20;
+  height: 100%;
+}
+
+.nav-container {
+  background-color: black;
+}
+
+.nav-bar {
+  width: 80%;
+  margin: auto;
+  min-height: 10vh;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  list-style: none;
+}
+
+.nav-bar ul .jump-to-sign-in-page {
+  color: #f98110;
+  position: relative;
+}
+
+.nav-bar ul .jump-to-sign-in-page::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -25px;
+  height: 40px;
+  width: 2px;
+  background-color: white;
+}
+
+.nav-bar ul .jump-to-sign-in-page:hover {
+  color: white;
+}
+
+.nav-bar ul a:hover {
+  color: #f98110;
+}
+
+.nav-bar #logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-bar #logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #f98110;
+  border-radius: 50%;
+  -webkit-transform: translate(-10%, -25%);
+          transform: translate(-10%, -25%);
+  mix-blend-mode: screen;
+}
+
+.nav-bar #logo img {
+  width: 100px;
+}
+
+.nav-bar .start-here {
+  background-color: #f98110;
+  padding: 10px 20px;
+}
+
+.nav-bar .start-here:hover {
+  background-color: white;
+  color: #f98110;
+}
+
+.showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.showcase .logo-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 800px;
+  color: #f98110;
+}
+
+.showcase .logo-name img {
+  width: 300px;
+}
+
+.showcase .landing-page-image {
+  width: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.showcase .info {
+  width: 420px;
+  height: 30vh;
+  margin-left: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.showcase .info h3 {
+  color: white;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+}
+
+.showcase .info h3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.showcase .info .type {
+  color: #f98110;
+}
+
+.templates-container {
+  height: 100vh;
+  background-color: white;
+}
+
+.templates-container .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 100%;
+  color: black;
+  line-height: 60px;
+}
+
+.templates-container .text #text-head {
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+.templates-container .text #text-head span {
+  color: #f98110;
+}
+
+.templates-container .text #text-head2 {
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+}
+
+.templates-container .text #text-head2 span {
+  color: #f98110;
+}
+
+.templates-container .templates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.templates-container .templates .h1 {
+  color: #000;
+}
+
+.templates-container .templates .template {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  margin: 20px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  cursor: pointer;
+}
+
+.templates-container .templates .template img {
+  width: 350px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.templates-container .templates .template:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.templates-container .templates .name {
+  color: black;
+}
+
+.ad {
+  width: 100%;
+  height: 100vh;
+  background-color: #f98110;
+}
+
+.ad .ad-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ad .ad-container .ad-left {
+  width: 50%;
+  height: 100%;
+}
+
+.ad .ad-container .ad-left .black-bg {
+  width: 100%;
+  background-color: black;
+  height: 100vh;
+}
+
+.ad .ad-container .ad-right {
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.ad .ad-container .ad-right div {
+  width: 80%;
+  margin: auto;
+}
+
+.ad .ad-container .ad-right div h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.ad .ad-container .ad-right div span {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ad .ad-container .ad-right .text {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 40px;
+}
+
+.ad .ad-container .ad-right .text p {
+  font-family: 'Roboto', sans-serif;
+  width: 80%;
+  margin: auto;
+  text-align: justify;
+}
+
+.ad .ad-container .ad-right .ad-btn {
+  width: 20%;
+  padding: 6px;
+  border: none;
+  color: #f98110;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(#f5ac69), to(white));
+  background-image: linear-gradient(to right, white, #f5ac69, white);
+  background-size: 200%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.ad .ad-container .ad-right .ad-btn:hover {
+  background-position: right;
+}
+
+.footer-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+}
+
+.footer-container .footer-text {
+  color: black;
+}
+
+.footer-container .title-logo {
+  font-family: "Lobster Two", cursive;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.footer-container .title-logo img {
+  width: 200px;
+}
+
+.footer-container .icon-container img {
+  width: 40px;
+}
+/*# sourceMappingURL=style.css.map */

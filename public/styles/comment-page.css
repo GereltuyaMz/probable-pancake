@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Lobster Two", cursive;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.back-img {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: -100;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.back-img img {
+  width: 30%;
+}
+
+.nav-container {
+  background-color: black;
+}
+
+.nav-container .nav-bar {
+  width: 80%;
+  margin: auto;
+  min-height: 10vh;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-container .nav-bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  list-style: none;
+}
+
+.nav-container .nav-bar ul .jump-to-sign-in-page {
+  color: #f98110;
+  position: relative;
+}
+
+.nav-container .nav-bar ul .jump-to-sign-in-page::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -25px;
+  height: 40px;
+  width: 2px;
+  background-color: white;
+}
+
+.nav-container .nav-bar ul .jump-to-sign-in-page:hover {
+  color: white;
+}
+
+.nav-container .nav-bar ul a:hover {
+  color: #f98110;
+}
+
+.nav-container .nav-bar #logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-container .nav-bar #logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #f98110;
+  border-radius: 50%;
+  -webkit-transform: translate(-10%, -25%);
+          transform: translate(-10%, -25%);
+  mix-blend-mode: screen;
+}
+
+.nav-container .nav-bar .start-here {
+  background-color: #f98110;
+  padding: 10px 20px;
+}
+
+.nav-container .nav-bar .start-here:hover {
+  background-color: white;
+  color: #f98110;
+}
+
+.comment-header {
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+
+.comment-header h1 {
+  padding: 10px;
+  font-size: 45px;
+  color: #f98110;
+  font-family: "Roboto", sans-serif;
+}
+
+.comment-container {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0.3rem 0;
+}
+
+.comment-container .comment-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-color: #666 #ffffff;
+  padding: 60px 20px;
+}
+
+.comment-container .comment-cards .comment-box:not(:first-child) {
+  margin-left: -130px;
+  z-index: 1;
+}
+
+.comment-container .comment-cards .comment-box {
+  overflow-y: auto;
+  scrollbar-color: #f09819 #666;
+  cursor: context-menu;
+  width: 350px;
+  height: 340px;
+  padding: 35px;
+  margin: 0;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 3px 14px 0px #635f63;
+          box-shadow: 1px 3px 14px 0px #635f63;
+  color: white;
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.comment-container .comment-cards .comment-box:hover {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.comment-container .comment-cards .comment-box:hover ~ .comment-box {
+  -webkit-transform: translateX(130px);
+          transform: translateX(130px);
+}
+
+.comment-container .comment-cards .comment-box .comment-box-img {
+  background-image: url("../images/quotation-mark.svg");
+  background-position: right bottom;
+  background-size: 15%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding: 25px 0;
+}
+
+.comment-container .comment-cards .comment-box p {
+  line-height: 1.5;
+  padding: 5px;
+}
+/*# sourceMappingURL=comment-page.css.map */

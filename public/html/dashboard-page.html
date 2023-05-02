@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/dashboard-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@100;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+    <link rel="stylesheet" href="../online-shop-template/style/style.css">
+    <title>Dashboard Page</title>
+</head>
+
+<body>
+    <div id="load"></div>
+    <div class="back-img">
+        <img src="../images/undraw_data_trends_b0wg.svg" alt="">
+    </div>
+    <div class="dashboard-page">
+
+
+        <!-- Navigation bar start -->
+        <section class="header">
+            <div class="nav-container">
+                <div class="nav-bar">
+                    <h1 id="logo"><a href="./dashboard-page.html">EEZY</a></h1>
+                    <ul>
+                        <li onclick="showWebOps()"><a href="#"><i class="fas fa-plus-circle"></i> Шинэ вебсайт
+                                үүсгэх</a></li>
+                        <li class="start-here" onclick="showDrop()"><a href="#"><i class="fas fa-user"></i>
+                                Хэрэглэгч</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="dropdown" id="dropdown">
+            <div class="dropdown-container">
+                <ul>
+                    <li onclick="showProfileInfo()"><a href="#"><i class="fas fa-user"></i> Хэрэглэгчийн мэдээлэл</a>
+                    </li>
+                    <li id="feedback-modal"><a href="#"><i class="fas fa-comment"></i> Санал хүсэлт</a></li>
+                    <li onclick="logOut()"><a href="#"><i class="fas fa-sign-out-alt"></i> Гарах</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- feedback-modal -->
+        <div class="feedback-modal-container">
+            <section class="feedback-modal-content">
+                <header>
+                    <h2>Санал хүсэлтийн маягт</h2>
+                    <p>Бид нар үйл ажиллагаа сайжруулахын тулд таны санал хүсэлт, сэтгэгдэл сонсоход бид баяртай байх
+                        болно!</p>
+                </header>
+                <div class="feedback-form">
+                    <form class="feedback">
+                        <h3>Санал хүсэлт төрөл</h3>
+                        <div class="feedback-radio">
+                            <div class="feedback-comments">
+                                <input type="radio" id="comments" name="type" value="comments">
+                                <label for="comments">Сэтгэгдэл</label>
+                            </div>
+                            <div class="feedback-suggestions">
+                                <input type="radio" id="suggestions" name="type" value="suggestions">
+                                <label for="suggestions">Санал хүсэлт</label>
+                            </div>
+                        </div>
+                        <div class="feedback-area">
+                            <label for="feedback">Санал хүсэлтээ тайлбарлана уу:</label><br>
+                            <textarea name="feedback" id="text-area" cols="50" rows="8"></textarea>
+                        </div>
+                        <p id="blank"></p>
+                    </form>
+                    <div class="feedback-btn">
+                        <button type="button" id="feedback-btn">Санал хүсэлт илгээх</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- When the user input the form -->
+        <div class="success">
+            <img src="../images/confirmation.svg" alt="check">
+            <h2>Таны мессеж амжилттай илгээгдлээ!</h2>
+        </div>
+        <!-- Navigation bar end -->
+        <!-- The first page of the user-page -->
+        <section class="main-dashboard">
+            <section class="dashboard">
+                <div class="filter-container">
+                    <select name="filter-option" id="filter-option" onchange="filter()">
+                        <option value="Бүгд">Бүгд</option>
+                        <option value="Онлайн дэлгүүр">Онлайн дэлгүүр</option>
+                        <option value="Ресторан">Ресторан</option>
+                        <option value="CV">CV</option>
+                        <option value="Бизнес">Бизнес</option>
+                        <option value="Жуулчины бааз">Жуулчины бааз</option>
+                    </select>
+                </div>
+                <div class="search-container">
+                    <input id='search-input' type="text" placeholder="Хайх..." onkeyup="search()">
+                    <div class="search-button"><a href="#"><i class="fas fa-search"></i></a></div>
+                </div>
+            </section>
+            <section class="showPage">
+                <div class="show-page-container">
+                </div>
+            </section>
+        </section>
+        <!-- The beginning of the add new-website page -->
+        <section class="new-website-container">
+            <header>
+                <h1>Та ямар төрлийн вэбсайт хүсэж байна вэ?</h1>
+            </header>
+            <div class="new-website-content">
+                <div class="box-content" onclick="openWebsiteForm()">
+                    <div class="icon-name business-template">
+                        <a>
+                            <i class="fas fa-briefcase"></i>
+                            <p>Бизнес</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="box-content" onclick="openWebsiteForm()">
+                    <div class="icon-name online-shop-template">
+                        <a href="javascript:void(0)">
+                            <i class="fas fa-shopping-cart"></i>
+                            <p>Онлайн дэлгүүр</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <div class="icon-name restaurant-template" onclick="openWebsiteForm()">
+                        <a href="javascript:void(0)">
+                            <i class="fas fa-utensils"></i>
+                            <p>Ресторан ба хоолны газар</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="box-content " onclick="openWebsiteForm()">
+                    <div class="icon-name tourist-template">
+                        <a href="javascript:void(0)">
+                            <i class="fas fa-plane-departure"></i>
+                            <p>Жуулчны бааз</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="box-content " onclick="openWebsiteForm()">
+                    <div class="icon-name cv-template">
+                        <a href="javascript:void(0)">
+                            <i class="fas fa-portrait"></i>
+                            <p>CV ба портфолио</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- User's selected website name form section -->
+        <section id="box" class="selected-website open">
+            <header>
+                <h1>Вэбсайтынхаа нэрийг оруулана уу</h1>
+            </header>
+            <div class="website-name">
+                <form class="name-button">
+                    <input type="text" name="name" id="web-name">
+                    <button type="button" id="open-btn" onclick="createNewWebsite()">Вэбсайт нээх</button>
+                </form>
+            </div>
+        </section>
+        <!-- The beginning of the Хэрэглэгчийн мэдээлэл section -->
+        <div class="user-profile-container">
+            <div class="user-profile">
+                <section class="side-bar-container">
+                    <header class="icon-name">
+                        <i class="fas fa-user fa-lg"></i>
+                        <h3>Хэрэглэгч</h3>
+                    </header>
+                    <ul class="side-bar">
+                        <li class="side-bar-item test hover-light-grey" id="firstTab" onclick="openContent('setting')">
+                            <a href="javascript:void(0)"><i class="fas fa-cog"></i>
+                                <p>Тохиргоо</p>
+                            </a>
+                        </li>
+                        <li class="side-bar-item test hover-light-grey" onclick="openContent('time')">
+                            <a href="javascript:void(0)"><i class="far fa-calendar-alt"></i>
+                                <p>Цагийн бүсчлэл</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </section>
+                <section id="setting" class="setting-general active">
+                    <header id="user-header">
+                        <h3>Тохиргоо</h3>
+                    </header>
+                    <form class="user-input-form">
+                        <fieldset id="change-pwd">
+                            <div class="form-group">
+                                <label for="current-pwd">Одоогийн нууц үг</label>
+                                <input type="password" class="user-input" id="current-pwd" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="new-pwd">Шинэ нууц үг</label>
+                                <input type="password" class="user-input" id="new-pwd" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd-again">Шинэ нууц үг дахин оруулах</label>
+                                <input type="password" class="user-input" id="pwd-again" required>
+                            </div>
+                        </fieldset>
+                        <div class="form-action">
+                            <button type="button" class="save-btn" onclick="validate()"> Хадгалах </button>
+                        </div>
+                    </form>
+                </section>
+                <section id="time" class="setting-time-zone active">
+                    <header id="time-header">
+                        <h3>Цагийн бүсчлэл</h3>
+                    </header>
+                    <form class="user-input-form">
+                        <fieldset id="time-zone">
+                            <div class="time-group">
+                                <label for="time-zone">Цагийн бүсчлэл</label>
+                                <select name="timezone_offset" id="timezone-offset" class="span5">
+                                    <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+                                    <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+                                    <option value="-10:00">(GMT -10:00) Hawaii</option>
+                                    <option value="-09:50">(GMT -9:30) Taiohae</option>
+                                    <option value="-09:00">(GMT -9:00) Alaska</option>
+                                    <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                                </select>
+                            </div>
+                            <div class="time-group">
+                                <label for="date-format">Date format</label>
+                                <select name="date_offset" id="date-format" class="span5">
+                                    <option value="1">MM/DD/YYYY</option>
+                                    <option value="2">MM-DD-YYY</option>
+                                    <option value="3">M/D/YYYY</option>
+                                </select>
+                            </div>
+                            <div class="time-group">
+                                <label for="time-format">Time format</label>
+                                <select name="time_offset" id="time-format" class="span5">
+                                    <option value="1">12 hours</option>
+                                    <option value="2">24 hours</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                        <div class="form-action">
+                            <button type="submit" class="save-btn"> Хадгалах </button>
+                        </div>
+                    </form>
+                </section>
+
+            </div>
+        </div>
+    </div>
+    <!-- The end of the Хэрэглэгчийн мэдээлэл section -->
+
+
+    <script src="../js/firebase.js"></script>
+    <script src="../js/showOwnPage.js"></script>
+    <script src="../js/firebase-auth.js"></script>
+    <script src="../js/dashboard-page.js"></script>
+
+    <script src="../js/search.js"></script>
+    <script src="../js/sign-out.js"></script>
+
+    <script src="../online-shop-template/js/online-shop.js"></script>
+
+</body>
+
+</html>

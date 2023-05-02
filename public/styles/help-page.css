@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Lobster Two", cursive;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Lobster Two", cursive;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.question-image {
+  position: fixed;
+  bottom: 0;
+  right: -50px;
+  z-index: -20;
+  height: 50%;
+}
+
+.nav-container {
+  background-color: black;
+}
+
+.nav-bar {
+  width: 80%;
+  margin: auto;
+  min-height: 10vh;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  list-style: none;
+}
+
+.nav-bar ul .jump-to-sign-in-page {
+  color: #f98110;
+  position: relative;
+}
+
+.nav-bar ul .jump-to-sign-in-page::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -25px;
+  height: 40px;
+  width: 2px;
+  background-color: white;
+}
+
+.nav-bar ul .jump-to-sign-in-page:hover {
+  color: white;
+}
+
+.nav-bar ul a:hover {
+  color: #f98110;
+}
+
+.nav-bar #logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-bar #logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #f98110;
+  border-radius: 50%;
+  -webkit-transform: translate(-10%, -25%);
+          transform: translate(-10%, -25%);
+  mix-blend-mode: screen;
+}
+
+.nav-bar .start-here {
+  background-color: #f98110;
+  padding: 10px 20px;
+}
+
+.nav-bar .start-here:hover {
+  background-color: white;
+  color: #f98110;
+}
+
+.container-fluid {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.container-fluid h2 {
+  font-size: 30px;
+  color: black;
+  position: relative;
+  width: 100%;
+  font-family: 'Roboto',sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.container-fluid h2 span {
+  color: #f98110;
+}
+
+.container-fluid .accordion {
+  width: 100%;
+  padding: 10px 20px;
+  border: 3px solid black;
+  cursor: pointer;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-fluid .accordion .icon {
+  margin: 0 10px 0 0;
+  width: 32px;
+  height: 32px;
+  background: url("../images/add.png") no-repeat #f98110;
+  float: left;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+
+.container-fluid .accordion h5 {
+  font-size: 22px;
+  margin: 0;
+  padding: 3px 0 0 0;
+  font-weight: normal;
+  color: #f98110;
+}
+
+.container-fluid .panel {
+  padding: 0 15px;
+  border-left: 2px solid #f98110;
+  margin-left: 25px;
+  font-size: 14px;
+  text-align: justify;
+  overflow: hidden;
+  max-height: 0px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: black;
+}
+.panel p {
+  margin-bottom: 10px;
+}
+
+.container-fluid .panel img {
+  width: 100%;
+}
+
+.container-fluid .active {
+  max-height: 300px;
+  background-color: #f98110;
+  color: white;
+}
+
+.container-fluid .active h5 {
+  color: white;
+}
+
+.container-fluid .active .icon {
+  background: url("../images/minus.png") no-repeat white;
+}
+/*# sourceMappingURL=help-page.css.map */

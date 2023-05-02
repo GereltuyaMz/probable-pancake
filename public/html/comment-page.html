@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/comment-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@100;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <title>Feedback page</title>
+</head>
+
+<body>
+    <div class="back-img">
+        <img src="../images/undraw_reviews_lp8w.svg" alt="">
+    </div>
+    <div class="nav-container">
+        <div class="nav-bar">
+            <h1 id="logo">EEZY</h1>
+            <ul>
+                <li><a href="../index.html">Нүүр хуудас</a></li>
+                <li><a href="./comment-page.html">Сэтгэгдэл</a></li>
+                <li><a href="./help-page.html">Тусламж</a></li>
+                <li><a class='jump-to-sign-in-page' href="../html/sign-in.html">Нэвтрэх</a></li>
+                <li><a class="start-here" href="../html/sign-up.html">Эхлэх</a></li>
+            </ul>
+        </div>
+    </div>
+    <header class="comment-header">
+        <h1>Сэтгэгдэл</h1>
+    </header>
+    <div class="comment-container">
+        <div class="comment-cards">
+        </div>
+    </div>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/comment-page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  body {
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .wave1 {
+    position: fixed;
+    height: 60%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  .wave2 {
+    position: fixed;
+    height: 50%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  
+  .container {
+    width: 100vh;
+    height: 100vh;
+    padding: 0 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+  }
+  
+  .img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .img img {
+    width: 500px;
+  }
+  
+  .forgot-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    
+  }
+  
+  .forgot-container form {
+    width: 360px;
+  }
+  
+  .forgot-container form h3 {
+    font-size: 2.0rem;
+    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .forgot-container form .input-div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 7% 93%;
+        grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+    position: relative;
+  }
+  
+  .forgot-container form .input-div .i-class {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .forgot-container form .input-div .i-class i {
+    color: #d9d9d9;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  
+  .forgot-container form .input-div::after,
+  .forgot-container form .input-div::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #f98110;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  
+  .forgot-container form .input-div::after {
+    right: 50%;
+  }
+  
+  .forgot-container form .input-div::before {
+    left: 50%;
+  }
+  
+  .forgot-container form .input-div.input-div-one {
+    margin-top: 0px;
+  }
+  
+  .forgot-container form .input-div.input-div-two {
+    margin-bottom: 4px;
+  }
+  
+  .forgot-container .input-div > div {
+    position: relative;
+    height: 45px;
+  }
+  
+  .forgot-container .input-div > div .input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .forgot-container .input-div > div h5 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  
+  .forgot-container .input-div.input-div-focus .i-class i {
+    color: #f98110;
+  }
+  
+  .forgot-container .input-div.input-div-focus div h5 {
+    top: -5px;
+    font-size: 15px;
+  }
+  
+  .forgot-container .input-div.input-div-focus::after,
+  .forgot-container .input-div.input-div-focus::before {
+    width: 50%;
+  }
+  
+  .forgot-container a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  
+  .forgot-container a:hover {
+    color: #f98110;
+  }
+  
+  .forgot-container .btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f98110), color-stop(#f5ac69), to(#f98110));
+    background-image: linear-gradient(to right, #f98110, #f5ac69, #f98110);
+    background-size: 200%;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  
+  .forgot-container .btn:hover {
+    background-position: right;
+  }
+  
+  .avatar {
+    width: 250px;
+  }
+  /*# sourceMappingURL=sign-in.css.map */
+  .center {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+  .popup {
+    width:350px;
+    height:280px;
+    padding:30px 20px;
+    background:#f5f5f5;
+    border-radius:10px;
+    box-sizing:border-box;
+    z-index:2;
+    text-align:center;
+    opacity:0;
+    top:-200%;
+    transform:translate(-50%,-50%) scale(0.5);
+    transition: opacity 300ms ease-in-out,
+                top 1000ms ease-in-out,
+                transform 1000ms ease-in-out;
+  }
+  .popup.active {
+    opacity:1;
+    top:50%;
+    transform:translate(-50%,-50%) scale(1);
+    transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+  }
+  .popup .icon {
+    margin:5px 0px;
+    width:50px;
+    height:50px;
+    border:2px solid #34f234;
+    text-align:center;
+    display:inline-block;
+    border-radius:50%;
+    line-height:60px;
+  }
+  .popup .icon i.fa {
+    font-size:30px;
+    color:black;
+  } 
+  .popup .title {
+    margin:5px 0px;
+    font-size:30px;
+    font-weight:600;
+  }
+  .popup .description {
+    color:#222;
+    font-size:15px;
+    padding:5px;
+  }
+  .popup .dismiss-btn {
+    margin-top:15px;
+  }
+  .popup .dismiss-btn button {
+    padding:10px 20px;
+    background:#111;
+    color:#f5f5f5;
+    border:2px solid #111;
+    font-size:16px;
+    font-weight:600;
+    outline:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition: all 300ms ease-in-out;
+  }
+  .popup .dismiss-btn button:hover {
+    color:#111;
+    background:#f5f5f5;
+  }
+  .popup > div {
+    position:relative;
+    top:10px;
+    opacity:0;
+  }
+  .popup.active > div {
+    top:0px;
+    opacity:1;
+  }
+  .popup.active .icon {
+    transition: all 300ms ease-in-out 250ms;
+  }
+  .popup.active .title {
+    transition: all 300ms ease-in-out 300ms;
+  }
+  .popup.active .description {
+    transition: all 300ms ease-in-out 350ms;
+  }
+  .popup.active .dismiss-btn {
+    transition: all 300ms ease-in-out 400ms;
+  }
+
+  /* --------------------popup2 error */
+ 

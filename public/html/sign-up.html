@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@100;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/sign-up.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+
+</head>
+
+<body>
+    <div class="nav-container">
+        <div class="nav-bar">
+            <h1 id="logo">EEZY</h1>
+            <ul>
+                <li><a href="../index.html">Нүүр хуудас</a></li>
+                <li><a href="./comment-page.html">Сэтгэгдэл</a></li>
+                <li><a href="./comment-page.html">Тусламж</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <section class="container">
+        <div class="card image-card card-animation">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <div class="card-animation-content">
+                <p>Бүртгүүлчихэд л болно доо...</p>
+
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="form">
+                <img src="../images/undraw_Add_user_re_5oib.png" alt="">
+                <form action="#">
+                    <input type="text" id="lname" name="lastname" placeholder="Овог" required autocomplete="off">
+                    <span id="errorText-lname" class="errorText"></span>
+                    <input type="text" id="fname" name="firstname" placeholder="Нэр" required autocomplete="off">
+                    <span id="errorText-fname" class="errorText"></span>
+                    <input type="text" id="phone-number" name="phone-number" placeholder="Утасны дугаар" required
+                        autocomplete="off">
+                    <span id="errorText-phone" class="errorText"></span>
+                    <input type="text" id="email" name="email" placeholder="И-майл хаяг" autocomplete="off">
+                    <span id="errorText-email" class="errorText"></span>
+                    <input type="password" id="password" name="password" placeholder="Нууц үг" required
+                        autocomplete="off">
+                    <span id="errorText-pass" class="errorText"></span>
+                    <input type="password" id="confirm-password" name="confirm-password"
+                        placeholder="Нууц үг дахин оруулах" required autocomplete="off">
+                    <span id="errorText-confpass" class="errorText"></span>
+                    <span id="errorText" class="errorText"></span>
+
+                    <input id='sign-up-button' class='btn' type="button" value="БҮРТГҮҮЛЭХ" onclick="validate()">
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="../js/firebase.js"></script>
+    <script src="../js/sign-up.js"></script>
+    <script src="../js/validation.js"></script>
+
+
+</body>
+
+</html>

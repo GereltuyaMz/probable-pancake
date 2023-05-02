@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat&family=Comfortaa&family=Cormorant+Infant&family=Lobster&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Nike</title>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-page-html">
+            <main class="header has-background-color">
+                <div class="nav-bar">
+                    <h2 class="logo select-editable-content font-size" contenteditable="false">Nike</h2>
+
+                    <ul id="nav-bar-content">
+                        <li class="li-item"><a href="index.html"
+                                class="header-nav-bar-home a-item font-change font-size">Нүүр
+                                хуудас</a></li>
+                        <li class="li-item"><a href="index.html#product-page"
+                                class="header-nav-bar-products a-item font-change font-size">Бүтээгдэхүүн</a>
+                        </li>
+                        <li class="li-item"><a href="index.html#about-page"
+                                class="header-nav-bar-about-us a-item font-change font-size">Бидний тухай</a></li>
+                        <li class="li-item"><a href="index.html#contact-page"
+                                class="header-nav-bar-contacts a-item font-change font-size">Холбоо барих</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </main>
+            <section class="cover-image has-background-img">
+
+                <div class="cover-name  has-base-color">
+                    <h2 contenteditable="false" class="select-editable-content fontColor font-change">Nike is
+                        Life</h2>
+
+                </div>
+
+
+            </section>
+            <section class="products">
+
+                <h2 id='product-page' class="products-h2 fontColor font-change font-size">Бүтээгдэхүүн</h2>
+                <div class="products-container">
+                    <div class="card has-background-color">
+                        <div class="circle has-base-color"></div>
+
+                        <div class="image-box">
+                            <img src="../images/online-template-images/nike-air-max.png" alt="">
+                        </div>
+                        <div class="content-box">
+                            <h2 class="fontColor font-change font-size product-name">Nike Air Max</h2>
+                            <div class="size font-change">
+                                <h3>Хэмжээ :</h3>
+                                <span class="product-size selected">40</span>
+                                <span class="product-size">41</span>
+                                <span class="product-size">42</span>
+                                <span class="product-size">43</span>
+                            </div>
+                            <div class="color font-change">
+                                <h3>Өнгө :</h3>
+                                <span class="product-color choose"></span>
+                                <span class="product-color"></span>
+                                <span class="product-color"></span>
+
+                            </div>
+                            <a href="#" class="font-change font-size" class="order1">Захиалах</a>
+                        </div>
+                    </div>
+                    <div class="card has-background-color">
+                        <div class="circle has-base-color"></div>
+                        <div class="image-box">
+                            <img src="../images/online-template-images/nike-air-max.png" alt="">
+                        </div>
+                        <div class="content-box">
+                            <h2 class="fontColor font-change font-size product-name">Nike Air Max</h2>
+                            <div class="size font-change">
+                                <h3>Хэмжээ :</h3>
+                                <span class="product-size selected">40</span>
+                                <span class="product-size">41</span>
+                                <span class="product-size">42</span>
+                                <span class="product-size">43</span>
+                            </div>
+                            <div class="color font-change">
+                                <h3>Өнгө :</h3>
+                                <span class="product-color choose"></span>
+                                <span class="product-color"></span>
+                                <span class="product-color"></span>
+
+                            </div>
+                            <a href="#" class="font-change font-size" class="order1">Захиалах</a>
+                        </div>
+                    </div>
+                    <div class="card has-background-color">
+                        <div class="circle has-base-color"></div>
+                        <div class="image-box">
+                            <img src="../images/online-template-images/nike-air-max.png" alt="">
+                        </div>
+                        <div class="content-box">
+                            <h2 class="fontColor font-change font-size product-name">Nike Air Max</h2>
+                            <div class="size font-change">
+                                <h3>Хэмжээ :</h3>
+                                <span class="product-size selected">40</span>
+                                <span class="product-size">41</span>
+                                <span class="product-size">42</span>
+                                <span class="product-size">43</span>
+                            </div>
+                            <div class="color font-change">
+                                <h3>Өнгө :</h3>
+                                <span class="product-color choose"></span>
+                                <span class="product-color"></span>
+                                <span class="product-color"></span>
+
+                            </div>
+                            <a href="#" class="font-change font-size" class="order1">Захиалах</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="about">
+                <h2 id='about-page' class="about-h2 fontColor font-change font-size">Бидний тухай</h2>
+                <div class="about-us has-base-color">
+
+                    <div class="about-us-text select-editable-content textColor font-change font-size"
+                        contenteditable="false">
+                        <p class="font-size">“Nike” бол дэлхийн хамгийн алдартай, том спортын хэрэглэл үйлдвэрлэгч
+                            брэнд. Спорт гутлыг
+                            илүү
+                            сайжруулах хүсэл мөрөөдөлтэй ганцхан залуугийн хүсэл эрмэлзэл ердөө 50 жилийн дотор түүний
+                            компанийг 100 тэрбум ам.долларын өртөгтэй дэлхийн хэмжээний корпораци болгож, спортын
+                            хэрэглэл
+                            үйлдвэрлэх салбарт хувьсгал хийгээд зогсохгүй спортын түүхийг бүхэлд нь нэг шат ахиулахад
+                            томоохон хувьсгал хийсэн юм.<br><br>
+                            Бид таны хүссэн загварын пүүзийг хамгийн хямд үнээр, хамгийн хурдан хугацаанд нийлүүлэх
+                            болно!
+                        </p>
+                    </div>
+                    <div class="about-us-base1 has-background-color"></div>
+                    <div class="about-us-base2 has-base-color"></div>
+                    <div class="about-us-base3 has-background-color"></div>
+
+
+                </div>
+
+
+            </section>
+            <section class=" contacts">
+                <h2 id='contact-page' class="contact-h2 fontColor font-change font-size">Холбоо барих</h2>
+                <div class="contact has-background-color">
+                    <div class="contact-container">
+                        <div class="contact-info has-base-color">
+                            <div>
+
+                                <ul class="info">
+                                    <li>
+                                        <span><img src="../images/online-template-images/maps-and-flags.png"
+                                                alt=""></span>
+                                        <span contenteditable="false"
+                                            class='select-editable-content textColor font-change font-size'>ХУД
+                                            17-р хороо<br>King Tower,
+                                            <br>Улаанбаатар хот,
+                                            Монгол улс</span>
+                                    </li>
+                                    <li>
+                                        <span><img src="../images/online-template-images/email.png" alt=""></span>
+                                        <span contenteditable="false"
+                                            class='select-editable-content textColor font-change font-size'>info@nikemongolia.mn</span>
+                                    </li>
+                                    <li>
+                                        <span><img src="../images/online-template-images/phone-call.png" alt=""></span>
+                                        <span contenteditable="false"
+                                            class='select-editable-content textColor font-change font-size'>+976-9992-5757</span>
+                                    </li>
+                                </ul>
+                                <ul class="social-icons">
+                                    <li class="page-social-icon-facebook social-icon"><a class="facebookLink"
+                                            href="#"><img src="../images/online-template-images/facebook.png"
+                                                alt=""></a></li>
+                                    <li class="page-social-icon-instagram social-icon"><a class="instagramLink"
+                                            href="#"><img src="../images/online-template-images/instagram.png"
+                                                alt=""></a></li>
+                                    <li class="page-social-icon-linkedin social-icon"><a class="linkedinLink"
+                                            href="#"><img src="../images/online-template-images/linkedin.png"
+                                                alt=""></a></li>
+                                    <li class="page-social-icon-youtube social-icon"><a class="facebookLink"
+                                            href="#"><img src="../images/online-template-images/youtube.png" alt=""></a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <h2 class="fontColor font-change font-size">Захидал илгээх</h2>
+                            <div class="form-box">
+                                <div class="input-box w50">
+                                    <input type="text" name="firstname" id="firstname" required>
+                                    <span class="fontColor font-change font-size">Нэр</span>
+                                </div>
+                                <div class="input-box w50">
+                                    <input type="text" name="lastname" id="lastname" required>
+                                    <span class="fontColor font-change font-size">Овог</span>
+                                </div>
+                                <div class="input-box w50">
+                                    <input type="text" name="email" id="email" required>
+                                    <span class="fontColor font-change font-size">И-майл хаяг</span>
+                                </div>
+                                <div class="input-box w50">
+                                    <input type="text" name="phonenumber" id="phonenumber" required>
+                                    <span class="fontColor font-change font-size">Утас</span>
+                                </div>
+                                <div class="input-box w100">
+                                    <textarea name="message" id="message" required></textarea>
+                                    <span class="fontColor font-change font-size">Захидалаа энд бичнэ үү...</span>
+                                </div>
+                                <div class="input-box w100">
+                                    <input class="send-btn" type="submit" value="Илгээх"
+                                        onclick="createFormMessageSection()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <!--------------------Page editor------------------->
+        <section class="page-editor">
+
+            <div class="page-editor-container" id='dragme' draggable="true">
+                <div class="editor-container-top-peak"></div>
+                <div class="editor-container-top"></div>
+                <div class="editor-container-bottom"></div>
+                <div class="page-editor-homepage">
+                    <img src="../images/online-template-images/homepage.png" alt="">
+                    <h4>Нүүр хуудас</h4>
+                    <div class="page-editor-homepage-content">
+                        <div class="page-editor-homepage-content-text">Текст</div>
+                        <div class="page-editor-homepage-content-background-image"><span>Нүүр зураг</span>
+                            <div class="background-img-choices">
+                                <div></div>
+                                <div></div>
+                                <input type="file" id='upload-image' accept="image/*" onchange="uploadSelectedImage()">
+                                <label for="upload-image"><i class="fas fa-images"></i> Нүүр зураг оруулах</label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-editor-nav-bar">
+                    <img src="../images/online-template-images/list.png" alt="">
+                    <h4>Үндсэн цэс</h4>
+                    <div class="page-editor-nav-bar-content">
+                        <div class="page-editor-nav-bar-content1">
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Нүүр хуудас' class="page-editor-nav-bar-content-home input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/online-template-images/delete.png" alt=""></button>
+                            </div>
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Бүтээгдэхүүн'
+                                    class="page-editor-nav-bar-content-products input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/online-template-images/delete.png" alt=""></button>
+                            </div>
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Бидний тухай'
+                                    class="page-editor-nav-bar-content-about-us input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/online-template-images/delete.png" alt=""></button>
+                            </div>
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Холбоо барих'
+                                    class="page-editor-nav-bar-content-contacts input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/online-template-images/delete.png" alt=""></button>
+                            </div>
+                        </div>
+                        <button onclick="addNewInput()" class="add-btn" type="button"><img
+                                src="../images/online-template-images/plus.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="page-editor-design">
+                    <img src="../images/online-template-images/brush.png" alt="">
+                    <h4>Дизайн</h4>
+                    <div class="page-editor-design-content">
+
+
+                        <div class="page-editor-design-content-text1">
+                            <span>Дэвсгэр өнгө</span>
+
+                            <div class="background-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-text2">
+                            <span>Суурь өнгө</span>
+                            <div class="base-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-font">
+                            <span>Гарчигны өнгө</span>
+                            <div class="font-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-text">
+                            <span>Текстийн өнгө</span>
+                            <div class="text-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="font-editor">
+                            <span>Фонт сонголт</span>
+                            <div class="font-editor-choices">
+                                <div>Roboto</div>
+                                <div>Comfortaa</div>
+                                <div>Caveat</div>
+                                <div>Cormorant</div>
+                            </div>
+
+                        </div>
+                        <div class="font-size-editor">
+                            <span>Фонтны хэмжээ</span>
+                            <div class="slide-container">
+                                <input type="range" min="1" max="100" value="1" id="range" class="slider">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="page-editor-social">
+                    <img src="../images/online-template-images/bullhorn.png" alt="">
+                    <h4>Сошиал сувгууд</h4>
+                    <div class="page-editor-social-content">
+
+
+                        <div class="social-facebook">
+                            <img src="../images/online-template-images/facebook.png" alt="">
+                            <div class="toggle-button-facebook">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-instagram">
+                            <img src="../images/online-template-images/instagram.png" alt="">
+                            <div class="toggle-button-instagram">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-linkedin">
+                            <img src="../images/online-template-images/linkedin.png" alt="">
+                            <div class="toggle-button-linkedin">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-youtube">
+                            <img src="../images/online-template-images/youtube.png" alt="">
+                            <div class="toggle-button-youtube">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+                <button type="button" class="editor-save-button" onclick="savePage()">Хадгалах</button>
+        </section>
+
+
+
+
+    </div>
+    <script src="./js/pageEditor.js"></script>
+    <script src="./js/online-shop.js"></script>
+</body>
+
+</html>

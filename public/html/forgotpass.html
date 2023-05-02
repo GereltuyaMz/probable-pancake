@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/forgotpass.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+</head>
+
+<body>
+
+    <body>
+        <img class='wave1' src="../images/wave.png" alt="">
+        <img class='wave2' src="../images/wave.png" alt="">
+        <div class="container">
+            <div class="forgot-container">
+                <form action="#">
+                    <img class='avatar' src="../images/undraw_forgot_password_gi2d.svg" alt="">
+                    <h3>Бүртгэл сэргээх</h3>
+                    <div class="input-div input-div-one">
+                        <div class="i-class">
+
+                        </div>
+                        <div>
+                            <h5>И-майл хаяг</h5>
+                            <input class='input email' name='login-name' type="text" id="login_user_id" required
+                                autocomplete="off">
+                        </div>
+                    </div>
+                    <input type="button" value="Үргэлжлүүлэх" class="btn" id="open-popup-btn" onclick="resetPass()">
+
+                </form>
+            </div>
+        </div>
+        <div class="popup center">
+            <div class="icon">
+                <i class="fa fa-check-circle" style="font-size:46px"></i>
+            </div>
+            <div class="title">
+                Амжилттай!!
+            </div>
+            <div class="description">
+                И майл явуулсан тул майл ээ шалгаж нууц үгээ солино уу!
+            </div>
+            <div class="dismiss-btn">
+                <a href="../html/sign-in.html"> <button id="dismiss-popup-btn">
+                    Хаах
+                </button>
+            </a>
+            </div>
+        </div>
+        <script src="../js/forgotpass.js"></script>
+        <script src="../js/firebase.js"></script>
+        <script src="../js/firebase-auth.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat&family=Comfortaa&family=Cormorant+Infant&family=Lobster&display=swap"
+        rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+
+    <title>Bussines</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="preloader loading"></div>
+        <main class="header has-background-color">
+            <div class="nav-bar">
+                <h2 class="logo fontColor">BSDU</h2>
+                <ul>
+                    <li class="li-item"><a href="index.html"
+                            class="header-nav-bar-home a-item fontColor font-change font-size">Нүүр хуудас</a></li>
+                    <li class="li-item"><a href="index.html#service-page"
+                            class="header-nav-bar-products a-item fontColor font-change font-size">Үйлчилгээ</a></li>
+                    <li class="li-item"><a href="index.html#about-us-page"
+                            class="header-nav-bar-about-us a-item fontColor font-change font-size">Бидний тухай</a></li>
+                    <li class="li-item"><a href="index.html#contact-page"
+                            class="header-nav-bar-contacts a-item fontColor font-change font-size">Холбоо барих</a></li>
+
+                </ul>
+            </div>
+
+        </main>
+        <section class="cover-image">
+            <!--
+                <img src="./img/young-man-working-from-a-car-picjumbo-com.jpg" alt="">
+            -->
+            <div class="cover-img has-background-img">
+                <div class="cover-name has-base-color">
+                    <h2 class="select-editable-content texttColor font-change">Бизнес</h2>
+                </div>
+            </div>
+        </section>
+
+        <h1 id='service-page' class="title-h1 products-h2 fontColor font-change font-size has-background-color">
+            Үйлчилгээ</h1>
+
+        <section class="service-container">
+            <div class="service has-base-color">
+                <img src="../images/business-template-images/pexels-andrea-piacquadio-3760067.jpg" alt="">
+                <h2 class="select-editable-content textColor font-change font-size">Зөвлөгөө өгөх:</h2>
+                <p class="select-editable-content textColor font-change font-size">Энэ хуудсыг танай компанийн санал
+                    болгож буй үйлчилгээг жагсаахад ашигладаг.</p>
+            </div>
+
+            <div class="service has-base-color">
+                <img src="../images/business-template-images/pexels-lukas-590022.jpg" alt="">
+                <h2 class="select-editable-content textColor font-change font-size">Санхүүгийн:</h2>
+                <p class="select-editable-content textColor font-change font-size">Та хүссэн үйлчилгээгээ нэмэх эсвэл
+                    жагсаалтад орсон үйлчилгээг засах боломжтой.</p>
+            </div>
+
+            <div class="service has-base-color">
+                <img src="../images/business-template-images/pexels-pixabay-327540.jpg" alt="">
+                <h2 class="select-editable-content textColor font-change font-size">Маркетинг:</h2>
+                <p class="select-editable-content textColor font-change font-size">Та энэ бүх текстийг засварлаж,
+                    бичихийг хүссэн зүйлээрээ сольж болно.</p>
+
+            </div>
+
+        </section>
+
+        <h1 id='about-us-page' class="title-h1 about-h2 fontColor font-change font-size has-background-color">Бидний
+            тухай</h1>
+
+        <section class="about">
+
+            <div class="text">
+                <p class="select-editable-content textColor font-change font-size">Бидний тухай хуудас нь таны вэбсайтын
+                    үндсэн тайлбар юм. Вэбсайтынхаа талаар үйлчлүүлэгчдэд
+                    мэдэгдэх газар энд байна. Та энэ бүх текстийг засварлаж, бичихийг хүссэн зүйлээрээ сольж болно.
+                    Жишээлбэл, та бизнест хэр удаан ажилласан, танай компанийг юугаараа онцгой болгодог,
+                    түүний үнэт зүйл юу вэ гэх мэт зүйлийг тэдэнд мэдэгдэж болно.
+                    Хуудасны табаас Өөрийнхөө хуудсыг засах товчийг дарж засна уу.
+                </p>
+                <img src="../images/business-template-images/pexels-pixabay-164583.jpg" alt="">
+            </div>
+
+        </section>
+
+        <h1 class="title-h1 contact-h2 fontColor font-change font-size has-background-color">Холбоо барих</h1>
+
+        <section class="contact" id="contact-page">
+            <div class="garchig font-change font-size">
+                <div class="address font-change font-size has-base-color">
+                    <h3>Манай хаяг:</h3>
+                    <p class="select-editable-content textColor font-change font-size"><i
+                            class="fas fa-map-marker-alt"></i> Монгол улс, Улаанбаатар хот, Байнгол дүүрэг Чингүнжавын
+                        гудамж, Sky tower, 20 давхар</p>
+                    <p class="select-editable-content textColor font-change font-size"><i
+                            class="fas fa-phone textColor"></i> 999-7777-000</p>
+                    <p class="select-editable-content textColor font-change font-size"><i
+                            class="far fa-envelope textColor"></i> жишээ@example.com</p>
+                    <div class="pic">
+                        <ul class="pics">
+                            <li><a href="#" class="facebookLink"><img class="page-social-icon-facebook"
+                                        src="../images/business-template-images/facebook.png" alt=""></a></li>
+                            <li><a href="#" class="instagramLink"><img class="page-social-icon-instagram"
+                                        src="../images/business-template-images/instagram.png" alt=""></a></li>
+                            <li><a href="#" class="youtubeLink"><img class="page-social-icon-youtube"
+                                        src="../images/business-template-images/youtube.png" alt=""></a></li>
+                            <li><a href="#" class="linkedinLink"><img class="page-social-icon-linkedin"
+                                        src="../images/business-template-images/linkedin.png" alt=""></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form ">
+                <h4 class="font-change font-size">Ерөнхий лавлагаа авахын тулд дараахь холбоо барих хуудсыг бөглөнө үү.
+                </h4>
+                <div class="form-main">
+                    <div class="register">
+                        <input type="text" placeholder="Нэр" class="w50" id="firstname"></input>
+                        <input type="text" placeholder="Овог" class="w50"></input>
+                        <input type="text" placeholder="Утас" class="w100"></input>
+                        <input type="text" placeholder="Email хаяг" class='w100' id="email"></input>
+                    </div>
+                    <div class="writing">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Захидал"></textarea>
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit" class="font-change font-size send-btn"
+                        onclick="createFormMessageSection()">Илгээх</button>
+                </div>
+            </div>
+
+        </section>
+        <section class="footer">
+
+        </section>
+        <section class="page-editor">
+
+            <div class="page-editor-container" id='dragme' draggable="true">
+                <div class="editor-container-top-peak"></div>
+                <div class="editor-container-top"></div>
+                <div class="editor-container-bottom"></div>
+                <div class="page-editor-homepage">
+                    <img src="../images/business-template-images/homepage.png" alt="">
+                    <h4>Нүүр хуудас</h4>
+                    <div class="page-editor-homepage-content">
+                        <div class="page-editor-homepage-content-text">Текст</div>
+                        <div class="page-editor-homepage-content-background-image"><span>Нүүр зураг</span>
+                            <div class="background-img-choices">
+                                <div></div>
+                                <div></div>
+                                <input type="file" id='upload-image' accept="image/*" onchange="uploadSelectedImage()">
+                                <label for="upload-image"><i class="fas fa-images"></i> Нүүр зураг оруулах</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-editor-nav-bar">
+                    <img src="../images/business-template-images/list.png" alt="">
+                    <h4>Үндсэн цэс</h4>
+                    <div class="page-editor-nav-bar-content">
+                        <div class="page-editor-nav-bar-content1">
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Нүүр хуудас' class="page-editor-nav-bar-content-home input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/business-template-images/delete.png" alt=""></button>
+                            </div>
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Үйлчилгээ' class="page-editor-nav-bar-content-products input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/business-template-images/delete.png" alt=""></button>
+                            </div>
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Бидний тухай'
+                                    class="page-editor-nav-bar-content-about-us input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/business-template-images/delete.png" alt=""></button>
+                            </div>
+                            <div class="page-editor-nav-bar-item">
+                                <input type=text value='Холбоо барих'
+                                    class="page-editor-nav-bar-content-contacts input-a">
+                                <button class="del-btn" type="button"><img
+                                        src="../images/business-template-images/delete.png" alt=""></button>
+                            </div>
+                        </div>
+                        <button onclick="addNewInput()" class="add-btn" type="button"><img
+                                src="../images/business-template-images/plus.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="page-editor-design">
+                    <img src="../images/business-template-images/brush.png" alt="">
+                    <h4>Дизайн</h4>
+                    <div class="page-editor-design-content">
+
+                        <div class="page-editor-design-content-text1">
+                            <span>Дэвсгэр өнгө</span>
+
+                            <div class="background-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-text2">
+                            <span>Суурь өнгө</span>
+                            <div class="base-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-font">
+                            <span>Гарчигны өнгө</span>
+                            <div class="font-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="page-editor-design-content-text">
+                            <span>Текстийн өнгө</span>
+                            <div class="text-color-choices">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="font-editor">
+                            <span>Фонт сонголт</span>
+                            <div class="font-editor-choices">
+                                <div>Roboto</div>
+                                <div>Comfortaa</div>
+                                <div>Caveat</div>
+                                <div>Cormorant</div>
+                            </div>
+
+                        </div>
+                        <div class="font-size-editor">
+                            <span>Фонтны хэмжээ</span>
+                            <div class="slide-container">
+                                <input type="range" min="1" max="100" value="1" id="range" class="slider">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="page-editor-social">
+                    <img src="../images/business-template-images/bullhorn.png" alt="">
+                    <h4>Сошиал сувгууд</h4>
+                    <div class="page-editor-social-content">
+
+
+                        <div class="social-facebook">
+                            <img src="../images/business-template-images/facebook.png" alt="">
+                            <div class="toggle-button-facebook">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-instagram">
+                            <img src="../images/business-template-images/instagram.png" alt="">
+                            <div class="toggle-button-instagram">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-linkedin">
+                            <img src="../images/business-template-images/linkedin.png" alt="">
+                            <div class="toggle-button-linkedin">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                        <div class="social-youtube">
+                            <img src="../images/business-template-images/youtube.png" alt="">
+                            <div class="toggle-button-youtube">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <button type="button" class="editor-save-button" onclick="savePage()">Хадгалах</button>
+        </section>
+    </div>
+
+
+    <script src="./js/pageEditor.js"></script>
+    <script src="./js/business.js"></script>
+
+
+</body>
+
+</html>

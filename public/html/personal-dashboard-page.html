@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/dashboard-page.css">
+    <link rel="stylesheet" href="../styles/personal-dashboard-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@100;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+    <link rel="stylesheet" href="../online-shop-template/style/style.css">
+    <title>Personal Dashboard Page</title>
+</head>
+
+<body>
+    <div id="load"></div>
+    <div class="personal-dashboard-page">
+        <div class="notification-container hide">
+            <i class="fas fa-exclamation-circle"></i>
+            <span class="notification-msg"></span>
+            <span class="close-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+
+
+        <section class="header">
+            <div class="nav-container">
+                <div class="nav-bar">
+                    <h1 id="logo"><a href="#">EEZY</a></h1>
+
+                </div>
+            </div>
+            <div class="back-to-dashboard">
+                <a href="./dashboard-page.html"><button type="button" class="back-btn">БУЦАХ</button></a>
+            </div>
+        </section>
+
+        <section class="dropdown">
+            <div class="dropdown-container">
+                <ul>
+                    <li><a href=""><i class="fas fa-user"></i> Хэрэглэгчийн мэдээлэл</a></li>
+                    <li><a href=""><i class="fas fa-sign-out-alt"></i> Гарах</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="personal-dashboard">
+            <div class="personal-dashboard-container">
+                <div class="dashboard-left">
+                    <div class="image-container"><img src="../images/nike.png" class="info-image-value"></div>
+                    <div class="info-container">
+                        <div class="info">
+                            <div class="info-name-placeholder">Вебсайтны нэр: </div>
+                            <div class="info-name-value">Nike</div>
+                        </div>
+                        <div class="info">
+                            <div class="info-type-placeholder">Вебсайтны төрөл: </div>
+                            <div class="info-type-value">Онлайн дэлгүүр</div>
+                        </div>
+                        <div class="info">
+                            <div class="info-type-placeholder">Зочины орох линк: </div>
+                            <a href='#' class="info-link-value">link</a>
+                        </div>
+                    </div>
+                    <section id="integration" class="setting-integration">
+                        <header id="integ-header">
+                            <span>Интeграци:</span>
+                        </header>
+                        <div id="integration-content">
+                            <p class="text2">Та өөрийн сошиал сувгуудын URL хаягийг харгалзах мөрөнд оруулан, дараа нь
+                                холбох товчийг
+                                дарна уу!</p>
+                            <div class="social-media-icons">
+                                <div class="media-box">
+
+                                    <div class="social-media-item">
+                                        <i class="fab fa-facebook-square"></i>
+
+                                    </div>
+                                    <input class="facebook-link-input act" type="text" value="">
+                                </div>
+                                <div class="media-box">
+
+                                    <div class="social-media-item">
+                                        <i class="fab fa-instagram-square"></i>
+
+                                    </div>
+                                    <input class="instagram-link-input" type="text" value="">
+                                </div>
+                                <div class="media-box">
+
+                                    <div class="social-media-item">
+                                        <i class="fab fa-linkedin"></i>
+
+                                    </div>
+                                    <input class="linkedin-link-input" type="text" value="">
+                                </div>
+                                <div class="media-box">
+
+                                    <div class="social-media-item">
+                                        <i class="fab fa-youtube-square"></i>
+
+                                    </div>
+                                    <input class="youtube-link-input" type="text" value="">
+                                </div>
+                                <button class="connect1 connect-btn" type="button" onclick="sendLinks()">Холбох</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="dashboard-right">
+                    <div class="edit-container">
+                        <button type="button" class="edit-button"><i class="far fa-edit"></i> Засвар</button>
+                        <!-- <button type="button" class="settings-button"><i class="fas fa-cog"></i> Тохиргоо</button> -->
+                    </div>
+                    <h2 class="activity-text">Үйл явц</h2>
+                    <div class="activity-container">
+
+                        <div class="form-message-container">
+                            <div class="form-message-icon"><i class="far fa-envelope"></i></div>
+                            <div class="form-message-info">
+                                <span class="form-message-count">0</span>
+                                <span>Форм мессеж</span>
+                            </div>
+                        </div>
+
+                        <div class="order-notif-container">
+                            <div class="order-notif-icon"><i class="far fa-bell"></i></div>
+                            <div class="order-notif-info">
+                                <span class="order-count">0</span>
+                                <span>Захиалга</span>
+
+                            </div>
+                        </div>
+
+                        <div class="mailing-list-container">
+                            <div class="mailing-list-icon"><i class="far fa-paper-plane"></i></div>
+                            <div class="mailing-list-info">
+                                <span>0</span>
+                                <span>И-майл</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-right-a"></div>
+                    <div class="dashboard-right-b"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/firebase-auth.js"></script>
+    <script src="../js/integration.js"></script>
+
+    <script src="../js/personal-dashboard-page.js"></script>
+
+</body>
+
+</html>

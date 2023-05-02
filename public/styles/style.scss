@@ -1,0 +1,356 @@
+//-------------------------Main page's CSS-----------------------------//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background-color: white;
+
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-size: 16px;
+  font-family: "Lobster Two", cursive;
+}
+h2 {
+  font-size: 50px;
+  font-family: "Lobster Two", cursive;
+  font-weight: bolder;
+}
+h3 {
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+}
+p {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -20;
+  height: 100%;
+}
+
+.nav-container {
+  background-color: black;
+}
+.nav-bar {
+  width: 80%;
+  margin: auto;
+  min-height: 10vh;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    list-style: none;
+
+    .jump-to-sign-in-page {
+      color: #f98110;
+      position: relative;
+    }
+    .jump-to-sign-in-page::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: -25px;
+      height: 40px;
+      width: 2px;
+      background-color: white;
+    }
+    .jump-to-sign-in-page:hover {
+      color: white;
+    }
+
+    a:hover {
+      color: #f98110;
+    }
+  }
+  #logo {
+    flex: 1;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45px;
+      height: 45px;
+      background-color: #f98110;
+      border-radius: 50%;
+      transform: translate(-10%, -25%);
+      mix-blend-mode: screen;
+    }
+    img {
+      width: 100px;
+    }
+  }
+  
+  .start-here {
+    background-color: #f98110;
+    padding: 10px 20px;
+  }
+  .start-here:hover {
+    background-color: white;
+    color: #f98110;
+  }
+}
+
+
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  .logo-name {
+    display: flex;
+    margin-right: 800px;
+    
+    color: #f98110;
+
+    img {
+      width: 300px;
+    }
+  }
+
+  .landing-page-image {
+    width: 500px;
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .info {
+    width: 420px;
+    height: 30vh;
+    margin-left: 900px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      color: white;
+      text-align: center;
+      position: relative;
+      padding: 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+
+        z-index: -1;
+        border-radius: 10px;
+      }
+    }
+    .type {
+      color: #f98110;
+    }
+  }
+}
+
+.templates-container{
+  height: 100vh;
+  background-color: white;
+
+  .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    color: black;
+    line-height: 60px;
+   
+    
+    #text-head{
+      font-size: 40px;font-family: "Roboto", sans-serif;
+      span {
+        color: #f98110;
+      }
+      
+      
+    }
+    #text-head2{
+      font-size: 20px;
+      font-weight: lighter;font-family: "Roboto", sans-serif;
+      span {
+        color: #f98110;
+      }
+      
+    }
+  }
+  
+  .templates {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  
+    .h1 {
+      color: #000;
+      
+    }
+    
+    .template{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px;
+      
+      margin: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background-color: white;
+      font-family: "Roboto", sans-serif;
+      transition: all 2s ease;
+      cursor: pointer;
+    
+
+    }
+    .template img{
+      width: 350px;
+      transition: all 2s ease;
+    } 
+    .template:hover{
+      transform: scale(1.2);
+      
+    }
+    .name{
+      color: black;
+    }
+  }
+}
+.ad {
+  width: 100%;
+  height: 100vh;
+  background-color: #f98110;
+
+  .ad-container {
+    display: flex;
+    
+    .ad-left {
+      width: 50%;
+      height: 100%;
+
+      .black-bg {
+        width: 100%;
+        background-color: black;
+        height: 100vh;
+      }
+    }
+    .ad-right {
+      font-family: 'Roboto', sans-serif;
+      margin: auto;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      
+      text-align: center;
+
+      div {
+        
+        width: 80%;
+        margin: auto;
+        h2 {
+          font-family: 'Roboto', sans-serif;
+        }
+        span {
+          color: black;
+          font-family: 'Roboto', sans-serif;
+        }
+        
+      }
+      .text {
+        font-family: 'Roboto', sans-serif;
+        margin-top: 40px;
+        p {
+          font-family: 'Roboto', sans-serif;
+          width: 80%;
+          margin: auto;
+          text-align: justify;
+        }
+      }
+
+      .ad-btn {
+        width: 20%;
+        padding: 6px;
+        border: none;
+        color: #f98110;
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        
+        cursor: pointer;
+        background-image: linear-gradient(
+        to right,
+        white,
+        rgb(245, 172, 105),
+        white
+        );
+        background-size: 200%;
+        transition: 0.5s ease;
+
+        font-size: 20px;
+        margin: auto;
+        margin-top: 40px;
+
+        &:hover {
+            background-position: right;
+        }
+      }
+    }
+
+  }
+
+}
+
+.footer-container{
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  font-size: 14px;
+  .footer-text {
+    color: black;
+  }
+  .title-logo {
+    font-family: "Lobster Two", cursive;
+    font-weight: bolder;
+    font-size: 40px;
+    img {
+      width: 200px;
+    }
+  }
+  .icon-container img {
+    width: 40px;
+  }
+}
+
